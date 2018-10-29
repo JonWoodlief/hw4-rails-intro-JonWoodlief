@@ -1,0 +1,214 @@
+[33mcommit 14edc67be96f4bf57c9e3fe7be4867a3d876323e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: Richard Ilson <rilson@uncc.edu>
+Date:   Mon Oct 15 13:40:29 2018 -0400
+
+    heroku setup streamline at beginning; also update end -- RI
+    
+    Edited the following:
+    ====
+    If this is your first time deploying to Heroku, you will need to do two things. First, sign up for a free Heroku account. Then set up ssh keys to securely communicate with Heroku for app deployments. The three basic commands you need are the following, but see the Heroku page for more details.
+    
+    $ ssh-keygen -t rsa
+    $ heroku login
+    $ heroku keys:add
+    Once your keys are set up (a one-time process), you should be able to create an "app container" on Heroku into which you'll deploy RottenPotatoes:
+    
+    $ heroku create
+    (You may see the following warning the first time - it's fine---answer
+    "yes", and in the future you shouldn't see it anymore:)
+    
+    The authenticity of host 'heroku.com (50.19.85.132)' can't be established.
+    RSA key fingerprint is 8b:48:5e:67:0e:c9:16:47:32:f2:87:0c:1f:c8:60:ad.
+    Are you sure you want to continue connecting (yes/no)?
+    Please type 'yes' or 'no':
+    ====
+    Now you should be able to navigate to your app's URL. heroku open opens your browser to that URL in case you forgot it, however this command does not work on c9, where you will need to navigate to the relevant URL.
+    Note: don't proceed past this point until you are able to complete the above successfully, or you won't be able to receive a grade for this assignment!
+    ====
+
+[33mcommit 6fef83cba4bfa9aa9d6524ad0d8ab0b36a5e92ea[m
+Author: Richard Ilson <rilson@uncc.edu>
+Date:   Mon Oct 15 13:26:20 2018 -0400
+
+    updated for our new repo structure and Codio -- RI
+    
+    Updated the following:
+    ====
+    The actual RottenPotatoes starter app you will use is in another public repo: saasbook/rottenpotatoes-rails-intro. Fork that repo to your own GitHub account, and then clone your fork:
+    
+    $ git clone git@github.com:your_github_username/rottenpotatoes-rails-intro.git
+    ====
+    At this point you should be able to run the app locally (rails server) and navigating to http://localhost:3000/movies in your browser. If you are using c9, use rails s -p $PORT -b $IP and navigate to the link generated within c9.
+    ====
+
+[33mcommit 75e135121f2ee67ec90b17cfc3f24cef609e388f[m
+Author: Matthew Lemmond <matthewjlemmond@gmail.com>
+Date:   Wed Oct 10 22:50:11 2018 -0400
+
+    rolled readme from instruction repo and files relevant to the readme into this repo to consolidate.
+
+[33mcommit 39ebb848cb625bc8cdd18da54e1b10421de2b7f8[m
+Merge: 691b8ea edf5838
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Fri Jul 13 18:27:14 2018 +0100
+
+    Merge pull request #22 from saasbook/ruby_2_4
+    
+    Upgrade to Ruby 2.4
+
+[33mcommit edf58381db605d6df064bcd3469bbbed4ec45db4[m[33m ([m[1;31morigin/ruby_2_4[m[33m)[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Mon Jun 25 10:07:49 2018 +0100
+
+    Update todo.md
+
+[33mcommit 97e561a873af14eae932ec306e85742d68432acf[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Fri Jun 15 16:08:54 2018 +0100
+
+    Update todo.md
+
+[33mcommit cd0e742d01c0a549f469a8ce049603adc081bd12[m
+Merge: c3f1325 c977873
+Author: Sam Joseph <tansaku+c9test@gmail.com>
+Date:   Fri Jun 15 14:54:42 2018 +0000
+
+    Merge branch 'ruby_2_4' of https://github.com/saasbook/rottenpotatoes-rails-intro into ruby_2_4
+
+[33mcommit c3f13258afa4264829a808c219ad35320284e08d[m
+Author: Sam Joseph <tansaku+c9test@gmail.com>
+Date:   Fri Jun 15 14:49:37 2018 +0000
+
+    lock to pg 0.21
+
+[33mcommit c977873570618bdd3511141a9bdf61ddb8f813cc[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Fri May 25 16:13:17 2018 +0100
+
+    Update todo.md
+
+[33mcommit 45e6dc522f7ee31b78fc30bd3d27a31a4d90acd8[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Fri May 25 16:11:29 2018 +0100
+
+    Create todo.md
+
+[33mcommit 1a05123706a19cedef62899bc43a3abf9e3fa576[m
+Author: Sam Joseph <tansaku+c9test@gmail.com>
+Date:   Fri May 25 14:51:12 2018 +0000
+
+    upgraded to ruby 2.4 and rails 4.2.10
+
+[33mcommit 691b8ea7b74fbb43fd7e39d060839d27f52011e4[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Wed Aug 30 13:28:59 2017 -0700
+
+    Update README.md
+
+[33mcommit 631e618a397cffd3ebaf714dbf91ead5089403b2[m
+Author: Sam Joseph <sam@neurogrid.com>
+Date:   Thu Jun 23 09:52:00 2016 +0000
+
+    updates Gemfile.lock to Rails 4.2.6 and Ruby 2.3.0
+
+[33mcommit 96c47115336cea805c074b46ed20031d3da5970a[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Thu Jun 23 10:48:22 2016 +0100
+
+    Update Gemfile
+
+[33mcommit 112df68e7abaa3af692dd0c85fa3f97e7023b637[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Thu Jun 23 10:47:48 2016 +0100
+
+    Update README.md
+
+[33mcommit 8ffc62010b6c2ea3eab9eb3d3bd348af32f487bd[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Thu Jun 23 10:46:10 2016 +0100
+
+    Update README.md
+
+[33mcommit 93359351350e1547889ec4c3365a665dfe02fc75[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sun Apr 3 16:34:24 2016 -0700
+
+    update README
+
+[33mcommit cfadc3d03d128e36e6050d26b3aa957c3ee0c5db[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sun Apr 3 16:28:21 2016 -0700
+
+    updated Gemfile to fix hard error: dependency on a yanked version of rb-inotify
+
+[33mcommit e01e1c6aec509d8fdcb9ea0b80dda0bd3cf3a8c6[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sun Apr 3 16:15:43 2016 -0700
+
+    add README
+
+[33mcommit 44944438d0666bb79575c4dd0b049cee6267bb4c[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sun Apr 3 16:08:26 2016 -0700
+
+    use Guard rather than autotest; version initial schema.rb
+
+[33mcommit acd6bb2bbdbbe808b22c126ddfa908cf8f41f11d[m
+Merge: dace648 631f137
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Mon Nov 9 04:49:10 2015 -0800
+
+    Merge pull request #5 from patmbolger/add-root-route
+    
+    added root route
+
+[33mcommit 631f13738d220bd093579cfdcce9ef6ec10a5f56[m
+Author: Patrick Bolger <patmbolger@gmail.com>
+Date:   Mon Nov 9 07:40:51 2015 -0500
+
+    added root route
+
+[33mcommit dace64846f2b293cc2e2461d323539e881fac923[m
+Merge: dd61964 a359297
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Thu Oct 15 09:11:13 2015 -0700
+
+    Merge pull request #2 from tansaku/master
+    
+    Update Gemfile
+
+[33mcommit a3592979bfda85383aae53ea993e245379e26e0b[m
+Author: Sam Joseph <tansaku@gmail.com>
+Date:   Tue Sep 29 15:29:33 2015 +0100
+
+    Update Gemfile
+
+[33mcommit dd619646ef5737dd974f2cfde1a599ee69d002c3[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Fri Aug 28 16:09:42 2015 -0700
+
+    lock Ruby to 2.2.2 in Gemfile
+
+[33mcommit d8d8098dbb8a4a08c89f7ba781cac11640ae7fb0[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sat Aug 8 19:35:23 2015 -0700
+
+    skeleton ready
+
+[33mcommit f3d6e1e8552651a12be88faac7c133649ded1b71[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sat Aug 8 19:30:05 2015 -0700
+
+    added Haml, resourceful routes
+
+[33mcommit 2d813348035b8d87eb4a30e0b73d8dd1b67abcbe[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sat Aug 8 19:24:10 2015 -0700
+
+    adding base files from rottenpotatoes app
+
+[33mcommit 49bf4c4af62a4663753b10a80da1f60ceaaeb607[m
+Author: Armando Fox <fox@cs.berkeley.edu>
+Date:   Sat Aug 8 19:17:58 2015 -0700
+
+    Version usable with hw-rails-intro
