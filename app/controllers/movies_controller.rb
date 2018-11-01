@@ -12,15 +12,34 @@ class MoviesController < ApplicationController
 
   def index
       @all_ratings = ['G','PG','PG-13','R']
+      redir = false
       
-      if params[:sortby] == "title"
-          @movies = Movie.where(params[:ratings]).order(:title)
+      
+      if params[:sortby].present?
+          session[:sortby] = params[:sortby]
+      else
+          redir = true
+      end
+      
+      if params[:ratings].present?
+          session[:ratings] = params[:ratings]
+      else
+          session[:ratings] = {'G' => 1,'PG' => 1,'PG-13' => 1,'R' => 1} if session[:ratings].nil?
+          redir = true
+      end
+          
+      if redir
+          puts "-------------------------"
+          puts session[:ratings]
+          puts session[:sortby]
+          puts "---------REDIRECTING"
+          redirect_to movies_path(:ratings => session[:ratings], :sortby => session[:sortby])
+      elsif params[:sortby] == "title"
+          @movies = Movie.where(:rating => params[:ratings].keys).order(:title)
           @titlecolor = "hilite"
       elsif params[:sortby] == "release_date"
-          @movies = Movie.where(params[:ratings]).order(:release_date)
+          @movies = Movie.where(:rating => params[:ratings].keys).order(:release_date)
           @datecolor = "hilite"
-      else
-          @movies = Movie.where("rating IN (?)", params[:ratings].keys)
       end
 
   end
