@@ -30,10 +30,6 @@ class MoviesController < ApplicationController
       end
           
       if redir
-          puts "-------------------------"
-          puts session[:ratings]
-          puts session[:sortby]
-          puts "---------REDIRECTING"
           redirect_to movies_path(:ratings => session[:ratings], :sortby => session[:sortby])
       elsif params[:sortby] == "title"
           @movies = Movie.where(:rating => params[:ratings].keys).order(:title)
