@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
       if params[:sortby].present?
           session[:sortby] = params[:sortby]
       else
+          session[:sortby] = "title" if session[:sortby].nil?
           redir = true
       end
       
